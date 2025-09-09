@@ -1,6 +1,15 @@
+<% if @book.errors.any? %>
+  <div class="errors">
+    <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <table>
-    <tr>
-        <th>Title</th>
-        <td><%= f.text_field(:title) %></td>
-    </tr>
+  <tr>
+    <th>Title</th>
+    <td><%= f.text_field(:title) %></td>
+  </tr>
 </table>
