@@ -12,4 +12,24 @@
     <th>Title</th>
     <td><%= f.text_field(:title) %></td>
   </tr>
+  <tr>
+    <th>Author</th>
+    <td><%= f.text_field(:author) %></td>
+  </tr>
+  <tr>
+    <th>Price</th>
+    <td><%= f.text_field(:price) %></td>
+  </tr>
+  <tr>
+    <th>Published Date</th>
+    <td>
+      <%= f.select :published_date, options_for_select([
+        Date.today + 2.days,
+        Date.today + 1.day,
+        Date.today,
+        Date.today - 1.day,
+        Date.today - 2.days,
+      ]) %>
+    </td>
+  </tr>
 </table>
